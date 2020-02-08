@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Admin Page</title>
+  <link rel="icon" href="images/ATBU.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+  <nav class="navbar navbar-dark" style="background-color: white;">
+  <div class="navbar-brand">
+    <img src="images/ATBU.png" height="75" alt="logo">
+  <span class="navbar-item" style="color: black"><i>Online Result Checker...</i></span>
+</div>
+<a href="LandingPage.html"><button class="btn btn-info btn-sm"> LOG OUT<i class="fas fa-sign-out-alt ml-1"></i></button></a>
+</nav><br><br>
+
+<div class="container">
+  <!-- Nav pills -->
+  <ul class="nav nav-pills justify-content-center" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#menu1">Current Results</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu2">Previous Results</a>
+    </li>
+  </ul><br>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="menu1" class="container tab-pane active"><br>
+    <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Paid Students
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+                 <table class="table table-striped">
+                   <thead class="info-color">
+                     <tr>
+                       <td>Reg No.</td>
+                       <td>Action</td>
+                     </tr>
+                   </thead>
+                   <tbody id="reg-tbody">
+
+                   </tbody>
+                 </table>
+          </div>
+          </div>
+  </div>
+
+
+  <div class="modal fade" id="indigoModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header text-center" style="background-color: skyblue;">
+        <h4 class="modal-title white-text w-100 font-weight-bold py-2">Add Student(s)</h4>
+        <button type="button" id="close-btn" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="add-student" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form3">Add Student</label>
+        </div><hr>
+
+      <div class="md-form">
+          <i class="fas fa-users prefix grey-text"></i>
+          <input type="email" id="form2" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form2">Add Students</label>
+        </div>
+      </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-center">
+        <button type="button" id="add-student-btn" class="btn btn-outline-info waves-effect">Submit <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<div class="text-right">
+  <button class="btn btn-info waves-effect btn-rounded btn-sm" data-toggle="modal" data-target="#indigoModalSubscription">Add students<i class="fas fa-plus ml-1"></i></button>
+</div><br><br><hr><br>
+
+
+  
+<h4>Results</h4><br>
+<div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+        2019/2020 Session
+      </a>
+      </div>
+      <div id="collapseThree" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          </div>
+    </div>
+    <div class="modal fade" id="orangeModalSubscription" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-warning" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Header-->
+      <div class="modal-header text-center" style="background-color: skyblue;">
+        <h4 class="modal-title white-text w-100 font-weight-bold py-2">Results Upload</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" class="white-text">&times;</span>
+        </button>
+      </div>
+
+      <!--Body-->
+      <div class="modal-body">
+        <div class="text-center">
+          <button class="btn btn-info waves-effect"> Upload<i class="fas fa-paper-upload"></i></button>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-upload prefix grey-text"></i>
+          <input type="text" id="form3" class="form-control validate">
+      </div>
+    </div>
+
+      <!--Footer-->
+      <div class="modal-footer justify-content-right">
+        <button type="button" class="btn btn-outline-info waves-effect">Done <i class="fas fa-paper-done"></i></button>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<div class="text-right">
+  <button class="btn btn-info waves-effect btn-rounded btn-sm" data-toggle="modal" data-target="#orangeModalSubscription">Upload Results<i class="fas fa-upload ml-1"></i></button>
+</div>
+</div>
+</div>
+
+
+<div id="menu2" class="container tab-pane fade"><br>
+  <h5> 2021/2022 Session</h5>
+      <div id="accordion">
+    <div class="card">
+          <div class="card-header">
+               <a class="collapsed card-link" data-toggle="collapse" href="#collapsefour">
+          First Semester
+                </a>
+          </div>
+          <div id="collapsefour" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          </div>
+    </div><div class="text-right"><button type="button" class="btn btn-info waves-effect btn-sm">print <i class="fas fa-print ml-1"></i></button></div><br>
+
+
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapsefive">
+        Second Semester
+      </a>
+      </div>
+      <div id="collapsefive" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          </div>
+    </div><div class="text-right"><button type="button" class="btn btn-info waves-effect btn-sm">print <i class="fas fa-print ml-1"></i></button></div><hr><br>
+
+
+  <h5> 2020/2021 Session</h5>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapsesix">
+          First Semester
+
+      </a>
+      </div>
+      <div id="collapsesix" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          </div>
+    </div><div class="text-right"><button type="button" class="btn btn-info waves-effect btn-sm">print <i class="fas fa-print ml-1"></i></button></div><br>
+
+
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseseven">
+        Second Semester
+
+      </a>
+      </div>
+      <div id="collapseseven" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          </div>
+    </div><div class="text-right"><button type="button" class="btn btn-info waves-effect btn-sm">print <i class="fas fa-print ml-1"></i></button></div><hr><br>
+
+
+  <h5> 2019/2020 Session</h5>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseeight">
+          First Semester
+      </a>
+      </div>
+      <div id="collapseeight" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          </div>
+    </div><div class="text-right"><button type="button" class="btn btn-info waves-effect btn-sm">print <i class="fas fa-print ml-1"></i></button></div><br>
+
+
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapsenine">
+        Second Semester 
+      </a>
+      </div>
+      <div id="collapsenine" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+          </div>
+    </div><div class="text-right"><button type="button" class="btn btn-info waves-effect btn-sm">print <i class="fas fa-print ml-1"></i></button></div>
+    </div>
+  </div>
+</div>
+</div><br>
+
+<!-- Card footer -->
+  <div class="card-footer text-muted text-center" style="margin-top: 35px">
+    For more information and enquires, visit <a href="www.atbu.edu.ng"> www.atbu.edu.ng</a>
+  </div>
+</body>
+  <!-- Start your project here-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

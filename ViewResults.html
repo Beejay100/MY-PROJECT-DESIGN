@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>View Results</title>
+  <link rel="icon" href="images/ATBU.png" type="image/x-icon" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Start your project here-->
+  <nav class="navbar navbar-dark" style="background-color: white;">
+  <div class="navbar-brand">
+    <img src="images/ATBU.png" height="75" alt="logo">
+  <span class="navbar-item" style="color: black"><i>Online Result Checker...</i></span>
+</div>
+
+<div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Write to us</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-user prefix grey-text"></i>
+          <input type="text" id="form34" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form34">Your name</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="form29" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form29">Your email</label>
+        </div>
+
+        <div class="md-form mb-5">
+          <i class="fas fa-tag prefix grey-text"></i>
+          <input type="text" id="form32" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="form32">Subject</label>
+        </div>
+
+        <div class="md-form">
+          <i class="fas fa-pencil prefix grey-text"></i>
+          <textarea type="text" id="form8" class="md-textarea form-control" rows="4"></textarea>
+          <label data-error="wrong" data-success="right" for="form8">Your message</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-info">Send <i class="fas fa-paper-plane-o ml-1"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center">
+  <a href="" class="btn btn-info btn-sm" data-toggle="modal" data-target="#modalContactForm">Any Complain?<i class="fas fa-pen ml-1"></i></a>
+
+<a href="LandingPage.html"><button class="btn btn-info btn-sm"> LOG OUT<i class="fas fa-sign-out-alt ml-1"></i></button></a>
+</div>
+</div>
+</nav><br>
+
+
+  <!-- Start your project here-->
+  <h2>You are logged in as <span id="user"></span></h2>
+  <hr/>
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <script>
+    const loggedStudent = sessionStorage.getItem("loggedinUser");
+    let user = document.getElementById("user");
+
+    fetch(`https://arcane-hollows-80777.herokuapp.com/api/admin/${loggedStudent}`)
+      .then(res => res.json())
+      .then((data) => {
+        user.innerHTML = data.regNo;
+        // here is where we will try to get the results from the JSON (that was converted from the excel sheet)
+      })
+  </script>
+
+  <!-- Card footer -->
+  <div class="card-footer text-muted text-center" style="margin-top: 460px">
+    For more information and enquires, visit <a href="www.atbu.edu.ng"> www.atbu.edu.ng</a>
+  </div>
+
+</body>
+
+</html>
